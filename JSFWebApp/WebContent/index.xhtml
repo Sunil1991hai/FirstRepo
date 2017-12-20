@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>  
+<h:title>Product Details</h:title>   
+</h:head>
+<h:body>
+<h:form>
+<h:panelGrid>
+<h:outputLabel for="txtName">
+<h:outputText value="Enter Product Id"></h:outputText>
+</h:outputLabel>
+<h:inputText id="txtName" value="#{product.productId}"/>
+
+<h:outputLabel for="txtpName" value="Enter Product Name"/>
+<h:inputText id="txtpName" value="#{product.productName}"/>
+
+<h:outputLabel for="txtaQuantity" value="Enter Available Quantity"/>
+<h:inputText id="txtaQuantity" value="#{product.availableQuantity}"/>
+
+<h:outputLabel for="txtCountry" value="Enter Country"/>
+<h:inputText id="txtCountry" value="#{product.country}"/>
+
+<br/>
+<h:commandButton id="cmdInsert" value="Add Iteam" action="#{product.add}"/>
+</h:panelGrid>
+</h:form>
+</h:body>
+</html>
+
